@@ -1,0 +1,20 @@
+﻿
+@model ViewImageViewModel
+
+<div class="container-mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-3">
+            <input type="hidden" value="@Model.CanLike" id="can-like" />
+            <h1>@Model.Picture.Title</h1>
+            <br />
+            <img src="/uploads/@Model.Picture.Path" width="500" />
+            <br />
+            <button class="btn btn-outline-success mt-3" style="width: 100px;" id="like-button">Like</button>
+            <h4>Likes: @Model.Picture.Likes</h4>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/js/javascript.js"></script>
+}
